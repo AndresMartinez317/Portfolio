@@ -294,15 +294,44 @@ h3.my-profession
 }
 .about .about-content .information
 {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 60%;
+    max-width: 60%;
     background-color: blue;
     margin-top: 40px;
 }
-.about .about-content .skills
+.about .about-content .information .info-item
 {
     flex: 0 0 50%;
     max-width: 50%;
+}
+.about .about-content .information .info-item p
+{
+    font-weight: 600;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+}
+.about .about-content .information .info-item p span
+{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+.about .about-content .information .buttons
+{
+    margin-top: 30px;
+}
+.about .about-content .information .buttons .btn
+{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.about .about-content .skills
+{
+    flex: 0 0 40%;
+    max-width: 40%;
     background-color: aqua;
     margin-top: 40px;
 }
