@@ -296,7 +296,6 @@ h3.my-profession
 {
     flex: 0 0 60%;
     max-width: 60%;
-    background-color: blue;
     margin-top: 40px;
 }
 .about .about-content .information .info-item
@@ -307,7 +306,7 @@ h3.my-profession
 .about .about-content .information .info-item p
 {
     font-weight: 600;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 16px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
@@ -332,6 +331,50 @@ h3.my-profession
 {
     flex: 0 0 40%;
     max-width: 40%;
-    background-color: aqua;
     margin-top: 40px;
+}
+.about .about-content .skills .skill-item
+{
+    flex: 0 0 100%;
+    max-width: 50%;
+}
+.about .about-content .skills .skill-item2
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .skills .skill-item h5
+{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+.about .about-content .skills .skill-item-2 h5
+{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+.about .about-content .education,
+.about .about-content .experience
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+    background-color: red;
+}
+.about .about-content .experience
+{
+    background-color: rosybrown;
+}
+.about .about-content h3.title
+{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-black-700);
 }
