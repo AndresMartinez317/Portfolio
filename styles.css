@@ -117,6 +117,10 @@ ul
 {
     transform: scale(1.05);
 }
+.shadow-dark
+{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
 .aside
 {
     width: 270px;
@@ -365,11 +369,6 @@ h3.my-profession
     flex: 0 0 50%;
     max-width: 50%;
     margin-top: 30px;
-    background-color: red;
-}
-.about .about-content .experience
-{
-    background-color: rosybrown;
 }
 .about .about-content h3.title
 {
@@ -378,3 +377,114 @@ h3.my-profession
     font-weight: 700;
     color: var(--text-black-700);
 }
+.about .about-content .timeline-box
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .timeline
+{
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+.about .about-content .timeline .timeline-item
+{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 8px;
+}
+.about .about-content .timeline .timeline-item:last-child
+{
+    padding-bottom: 0;
+}
+.about .about-content .timeline .timeline-item::before
+{
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    background-color: blue;
+}
+.about .about-content .timeline .circle-dot
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: blue;
+}
+.about .about-content .timeline .timeline-date
+{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-black-700);
+}
+.about .about-content .timeline .timeline-date .fa
+{
+    margin-right: 5px;
+}
+.about .about-content .timeline .timeline-title
+{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+}
+.about .about-content .timeline .timeline-subtitle
+{
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--text-black-900);
+}
+.about .about-content .timeline .timeline-text
+{
+    line-height: 20px;
+    font-size: 16px;
+    text-align: justify;
+    color: var(--text-black-700);
+}
+.projects .projects-item
+{
+    margin-bottom: 30px;
+    flex: 0 0 33%;
+    max-width: 33%;
+}
+.projects .projects-item .projects-item-inner
+{
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.3 ease;
+}
+.projects .projects-item .projects-item-inner:hover
+{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.projects .projects-item .projects-item-inner .icon
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    background-color: blue;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.projects .projects-item .projects-item-inner .icon .fa
+{
+    font-size: 40px;
+    line-height: 60px;
+}
+
