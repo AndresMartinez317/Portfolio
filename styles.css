@@ -478,7 +478,6 @@ h3.my-profession
     width: 60px;
     border-radius: 50%;
     display: block;
-    background-color: blue;
     margin: 0 auto 30px;
     text-align: center;
 }
@@ -486,5 +485,34 @@ h3.my-profession
 {
     font-size: 40px;
     line-height: 60px;
+    color: blue;
+    transition: all 0.3 ease;
+}
+.projects .projects-item .projects-item-inner:hover .icon
+{
+    background: blue;
+}
+.projects .projects-item .projects-item-inner:hover .icon .fa
+{
+    font-size: 25px;
+    color: #ffffff;
+}
+.projects .projects-item .projects-item-inner h4
+{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.projects .projects-item .projects-item-inner p
+{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
+}
+.projects .container
+{
+    padding-bottom: 40px;
 }
 
