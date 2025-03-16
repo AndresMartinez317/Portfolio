@@ -124,7 +124,6 @@ ul
 .aside
 {
     width: 270px;
-    background: var(--bg-black-100);
     position: fixed;
     left: 0;
     top: 0;
@@ -153,58 +152,23 @@ ul
     letter-spacing: 5px;
     position: relative;
 }
-.aside .nav-toggler
-{
-    height: 40px;
-    width: 45px;
-    border: 1px solid var(--bg-black-50);
-    cursor: pointer;
-    position: fixed;
-    left: 300px;
-    top: 20px;
-    border-radius: 5px;
-    background: var(--bg-black-100);
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-.aside .nav-toggler span
-{
-    height: 2px;
-    width: 18px;
-    background: red;
-    display: inline-block;
-    position: relative;
-}
-.aside .nav-toggler span::before
-{
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: red;
-    position: absolute;
-    top: -6px;
-    left: 0;
-
-}
-.aside .nav-toggler span::after
-{
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: red;
-    position: absolute;
-    top: 6px;
-    left: 0;
-
-}
-.aside.nav
+.aside .nav
 {
     margin-top: 50px;
 }
-.aside.nav li
+.aside .nav li
 {
     margin-bottom: 20px;
+    display: block;
+}
+.aside .nav li a
+{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 5px 15px;
 }
 .home
 {
@@ -244,28 +208,6 @@ h3.my-profession
     max-width: 40%;
     text-align: center;
     position: relative;
-}
-.home-img::before
-{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid blue;
-    border-right: 10px solid blue;
-    right: 20px;
-    bottom: -40px;
-}
-.home-img::after
-{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid blue;
-    border-left: 10px solid blue;
-    left: -20px;
-    top: -40px;
 }
 .home .home-img img
 {
@@ -514,5 +456,50 @@ h3.my-profession
 .projects .container
 {
     padding-bottom: 40px;
+}
+@media (max-width: 1199px)
+{
+    .aside
+    {
+        left: -270px;
+    }
+    .main-content
+    {
+        padding-left: 0;
+    }
+    .about .about-content .information .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width: 991px)
+{
+    .projects .projects-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+@media (max-width: 767px)
+{
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .information
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
 }
 
