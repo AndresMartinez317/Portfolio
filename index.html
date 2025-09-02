@@ -1,229 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Andrés Martínez — Software Developer</title>
-  <meta name="description" content="Professional portfolio — Full‑stack Software Developer. Projects, skills, contact and resume." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
-      --radius:14px; --maxw:1100px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{
-      margin:0; background:linear-gradient(180deg,#071022 0%, #0b1220 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.45;
-      display:flex; justify-content:center; padding:40px 20px; 
-    }
-    .container{width:100%;max-width:var(--maxw)}
-
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:grid;place-items:center;font-weight:800;color:#021124}
-    .name{font-weight:700;letter-spacing:0.2px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-    nav a.primary{background:var(--accent);color:white;padding:8px 12px;border-radius:10px}
-
-    .grid{display:grid;grid-template-columns:1fr 380px;gap:28px}
-    @media (max-width:980px){.grid{grid-template-columns:1fr} header{flex-direction:column;align-items:flex-start;gap:12px} nav a{margin-left:10px}}
-
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:22px;border-radius:var(--radius);box-shadow:0 6px 22px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-
-    .hero{display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .hero-left{max-width:680px}
-    h1{margin:0 0 6px;font-size:28px}
-    .subtitle{color:var(--muted);margin:0 0 16px}
-    .cta{display:flex;gap:12px;margin-top:12px}
-    .btn{padding:10px 14px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
-    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .btn-primary{background:var(--accent);color:white}
-
-    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted);font-weight:600}
-
-    .sidebar .contact-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(180deg,#122334,#0b1624);display:grid;place-items:center;font-size:32px;font-weight:800}
-    .stat{font-weight:700;font-size:20px}
-
-    /* Projects */
-    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
-    @media (max-width:700px){.projects-grid{grid-template-columns:1fr}}
-    .project{padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);cursor:pointer;display:flex;flex-direction:column;gap:10px}
-    .proj-title{font-weight:700}
-    .proj-desc{color:var(--muted);font-size:14px}
-    .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
-
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* modal */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:40}
-    .modal.open{display:flex}
-    .modal .inner{width:min(900px,92%);max-height:86vh;overflow:auto;padding:20px;border-radius:12px;background:linear-gradient(180deg,#061021,#071226);border:1px solid rgba(255,255,255,0.04)}
-    .close{background:transparent;border:0;color:var(--muted);font-weight:700;cursor:pointer}
-
-    /* small utilities */
-    .muted{color:var(--muted)}
-    a.link{color:var(--accent);text-decoration:none;font-weight:700}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Andres Ivan Martinez Padilla</title>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">AM</div>
-        <div>
-          <div class="name">Andrés Martínez</div>
-          <div class="muted" style="font-size:13px"> Software Developer — Toronto</div>
-        </div>
-      </div>
-    </header>
-
-    <main class="grid">
-      <section>
-        <div class="card hero">
-          <div class="hero-left">
-            <h1>Always learning new technology and improving myself.</h1>
-            <p class="subtitle">I design and implement production‑ready web applications. With a focus on clear architecture, and functionality.</p>
-            <div class="cta">
-              <button class="btn btn-primary" onclick="document.location='#projects'">See projects</button>
+     <div class="main-container"> 
+        <div class="aside">
+            <div class="logo">
+                <a href="#"><span>M</span>enu</a>
             </div>
-            <div class="skills" style="margin-top:18px">
-              <div class="skill">Object oriented programming</div>
-              <div class="skill">Javascript</div>
-              <div class="skill">Java</div>
-              <div class="skill">Kotlin</div>
-              <div class="skill">Node.js</div>
-              <div class="skill">Web_Development</div>
-              <div class="skill">SQL</div>
-            </div>
-          </div>
-
+            <ul class="nav">
+                <li><a href="#home" class="active"><i class="fa fa-home"></i> Home </a></li>
+                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="#projects"><i class="fa fa-list"></i>Projects</a></li>
+            </ul>
         </div>
-
-        <div id="projects" class="card" style="margin-top:18px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <h3 style="margin:0">Selected projects</h3>
-            <div class="muted" style="font-size:13px">Click a project for details</div>
-          </div>
-
-          <div class="projects-grid">
-            <div class="project" data-title="Gameweb_App" data-desc="Play different games in the web, register with an email and access various simple games." data-tech="HTML, Firebase, JS " onclick="openProject(this)">
-              <div style="display:flex;justify-content:space-between;align-items:center">
-                <div class="proj-title">Gameweb_App</div>
-                <div class="muted" style="font-size:12px">2024</div>
-              </div>
-              <div class="proj-desc">Play different games in the web, register with an email and access various simple games.</div>
-              <div class="tags"><span class="tag">HTML</span><span class="tag">Firebase</span><span class="tag">JS</span></div>
-            </div>
-
-          </div>
+        <div class="main-content">
+            <section class="home section" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello"> I am <span class="name">Andres Martinez </span></h3>
+                            <h3 class="my-profession "> <span class="typing"> Systems Engineer</span></h3>
+                            <p>
+                                I Graduated in systems engineering from the university of cartagena,and have work experience in the IT field, developing and testing software, with knowledge in Java, javascript, php, react and SQL.
+                                other disciplines include database and server management, QA activities and expertise in object oriented programming, web development, machine learning algorithms and more
+                            </p>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="foto.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about section" id="about" >
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2> About me </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="about-text padd-15">
+                                    <h3>Andres Ivan Martinez Padilla </h3>
+                                    <p> Born in Cartagena, Colombia, since my school days i was intrested in how computers and other machines worked, wich lead me to the path of programming, and finally, study systems engineering, my hobbies include reading books and playing video games with friends and family, i also enjoy programming small projects during free time, currently i reside on canada for study and work.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="information padd-15"> <span> INFORMATION </span>
+                                    <div class="row">
+                                        <div class="info-item padd-15 ">  
+                                            <p>Residence : <span> Toronto, ON</span> </p>
+                                        </div>
+                                        <div class="info-item padd-15 ">
+                                            <p>github  : <span> https://github.com/AndresMartinez317 </span> </p>
+                                        </div>
+                                        <div class="info-item padd-15 ">
+                                            <p>Degree : <span> Systems engineer</span> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills padd-15"> <span> SKILLS </span> 
+                                    <div class="row">
+                                        <div class="skill-item padd-15">
+                                            <h5> Java </h5>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5> Python </h5>
+                                        </div>
+                                        <div class="skill-item-2 padd-15">
+                                            <h5> React </h5>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5> Javascript </h5>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5> PHP </h5>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5> HTML & CSS </h5>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5> Database Management </h5>
+                                        </div>
+                                         <div class="skill-item padd-15">
+                                            <h5> Kotlin </h5>
+                                        </div>
+                                        <div class="skill-item-2 padd-15">
+                                            <h5> Object Orientend Programming </h5>
+                                        </div>
+                                        
+                                    </div>
+                             </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title"> Education </h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2016-2022
+                                                    </h3>
+                                                    <h4 class="timeline-title"> Systems engineering degree</h4>
+                                                    <h5 class="timeline-subtitle"> University of cartagena </h5>
+                                                    <p class="timeline-text"> 5+ years University program of systems engineering, subjects include:algorithms, Data structures, Object oriented programming, web development,networking, web services, database management and more </p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2024-2025
+                                                    </h3>
+                                                    <h4 class="timeline-title"> Computer programming diploma </h4>
+                                                    <h5 class="timeline-subtitle"> Georgian@ILAC </h5>
+                                                    <p class="timeline-text"> 2 year College study program subjects include: object oriented programming, html and css, php, web programming, Javascript, databases, arduino, microsoft web services and more </p>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience padd-15">
+                                    <h3 class="title"> Experience </h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022-2024
+                                                    </h3>
+                                                    <h4 class="timeline-title"> Software engineer asociate </h4>
+                                                    <h5 class="timeline-subtitle"> ScotiaGBS </h5>
+                                                    <p class="timeline-text"> worked as a software engineer, developing web aplications for the company , i was responsible of the writting code, managing the database and managing both testing and production servers</p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2021-2022
+                                                    </h3>
+                                                    <h4 class="timeline-title"> QA Analyst</h4>
+                                                    <h5 class="timeline-subtitle"> ScotiaGBS </h5>
+                                                    <p class="timeline-text"> worked as a QA software tester, realizing functional testing activities, regression testing and keeping the documentation of the application</p>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="web projects section" id="projects" >
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Web Projects</h2>
+                            <p>Projects deployed on the web, you can click each card to go to the website</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="projects-item padd-15">
+                            <div  class="projects-item-inner">
+                                <a href="https://gameweb-sand.vercel.app/" target="_blank">
+                                <div class="icon">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <h4> web game site</h4>
+                                <p>Play different games in the web, you can register with an email and access various simple games, Project made using JS and Firebase</p>
+                            </a>
+                            </div>
+                    </div>
+                    <div class="projects-item padd-15">
+                            <div  class="projects-item-inner">
+                                <a href="https://dice-games-rust.vercel.app/" target="_blank">
+                                <div class="icon">
+                                    <i class="fa fa-dice"></i>
+                                </div>
+                                <h4> Dice game site</h4>
+                                <p>Play different Dice games in the web, project made using React(still in progress) </p>
+                            </a>
+                            </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <div id="skills" class="card" style="margin-top:18px">
-          <h3 style="margin-top:0">Skills &amp; tools</h3>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
-            <div>
-              <div class="muted" style="font-size:12px">Frontend</div>
-              <div style="font-weight:700;margin-top:6px">HTML · CSS · TypeScript · PHP</div>
-            </div>
-            <div>
-              <div class="muted" style="font-size:12px">Backend</div>
-              <div style="font-weight:700;margin-top:6px">Javascript · java · Python· SQL · C#</div>
-            </div>
-            <div>
-              <div class="muted" style="font-size:12px">Infrastructure</div>
-              <div style="font-weight:700;margin-top:6px">Docker · GitHub · AWS · Azure</div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <aside class="sidebar">
-        <div class="card">
-          <h4 style="margin-top:0">Socials</h4>
-          <div style="margin-top:14px">
-            <a class="btn btn-outline" href="https://www.linkedin.com/in/andres-ivan-martinez-padilla/" target="_blank" style="margin-left:8px">LinkedIn</a>
-          </div>
-          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:16px 0">
-        </div>
-
-        <div class="card" style="margin-top:18px">
-          <h4 style="margin-top:0">Education</h4>
-          <div style="display:flex;gap:12px;flex-direction:column">
-            <div>
-              <div class="muted">University of Cartagena</div>
-            <div class="stat">Systems engineer diploma</div>
-          </div>
-            <div><div class="muted">Georgian@ILAC</div><div class="stat">Computer Programming</div></div> 
-          </div>
-        </div>
-                <div class="card" style="margin-top:18px">
-          <h4 style="margin-top:0">Work Experience</h4>
-          <div style="display:flex;gap:12px;flex-direction:column">
-            <div>
-              <div class="muted">Scotiabank</div>
-            <div class="stat">Software Enginer asociate</div>
-          </div>
-            <div><div class="muted">Scotiabank</div><div class="stat">QA Analyst</div></div> 
-          </div>
-        </div>
-
-      </aside>
-    </main>
-
-    <footer>
-      © {new Date().getFullYear()} Andrés Martínez
-    </footer>
-
-    <!-- Modal -->
-    <div id="modal" class="modal" role="dialog" aria-modal="true">
-      <div class="inner card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div id="modal-title" style="font-weight:800">Project</div>
-          <button class="close" onclick="closeProject()">Close</button>
-        </div>
-        <div id="modal-body" style="margin-top:10px;color:var(--muted)"></div>
-        <div style="margin-top:12px;font-weight:700" id="modal-tech"></div>
-        <div style="margin-top:16px;display:flex;gap:8px">
-          <a id="modal-demo" class="btn btn-primary" href="" target="_blank">Live demo</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    // Small helpers for modal project details
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalBody = document.getElementById('modal-body');
-    const modalTech = document.getElementById('modal-tech');
-    const modalDemo = document.getElementById('modal-demo');
-    const modalCode = document.getElementById('modal-code');
-
-    function openProject(el){
-      const title = el.dataset.title || 'Project';
-      const desc = el.dataset.desc || '';
-      const tech = el.dataset.tech || '';
-      modalTitle.textContent = title;
-      modalBody.textContent = desc;
-      modalTech.textContent = tech;
-      modalDemo.href = el.dataset.demo || 'https://gameweb-sand.vercel.app/';
-      modal.classList.add('open');
-    }
-    function closeProject(){ modal.classList.remove('open') }
-
-    // Accessibility: close modal on ESC
-    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeProject(); });
-
-    // Small runtime replacement for footer year (keeps file static)
-    document.querySelector('footer').innerHTML = document.querySelector('footer').innerHTML.replace('{new Date().getFullYear()}', new Date().getFullYear());
-  </script>
+     </div>
+     <!-- main container end  -->
+    <script src="script.js"></script>
 </body>
 </html>
