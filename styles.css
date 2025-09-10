@@ -377,6 +377,10 @@ h3.my-profession
 {
     margin-right: 5px;
 }
+.about .about-content .timeline .timeline-date .fa-brands
+{
+    margin-right: 5px;
+}
 .about .about-content .timeline .timeline-title
 {
     font-weight: 700;
@@ -434,11 +438,23 @@ h3.my-profession
     color: blue;
     transition: all 0.3 ease;
 }
+.projects .projects-item .projects-item-inner .icon .fa-brands
+{
+    font-size: 40px;
+    line-height: 60px;
+    color: blue;
+    transition: all 0.3 ease;
+}
 .projects .projects-item .projects-item-inner:hover .icon
 {
     background: blue;
 }
 .projects .projects-item .projects-item-inner:hover .icon .fa
+{
+    font-size: 25px;
+    color: #ffffff;
+}
+.projects .projects-item .projects-item-inner:hover .icon .fa-brands
 {
     font-size: 25px;
     color: #ffffff;
