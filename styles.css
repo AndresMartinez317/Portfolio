@@ -417,6 +417,8 @@ h3.my-profession
     padding: 30px 15px;
     text-align: center;
     transition: all 0.3 ease;
+    position: relative;
+    display: inline-block;
 }
 .projects .projects-item .projects-item-inner:hover
 {
@@ -458,6 +460,36 @@ h3.my-profession
 {
     font-size: 25px;
     color: #ffffff;
+}
+.projects .projects-item .projects-item-inner .codebutton
+{
+  background-color: blue;
+  border: none;
+  top: 10px;
+  right: 10px;
+  border-radius: 8px;
+  color: white;
+  padding: 2px 4px;
+  text-align: left;
+  text-decoration: none;
+  position: absolute;
+  font-size: 16px;
+  cursor: pointer;
+}
+.projects .projects-item .projects-item-inner .codebutton2
+{
+  background-color: blue;
+  border: none;
+  top: 40px;
+  right: 10px;
+  border-radius: 8px;
+  color: white;
+  padding: 2px 4px;
+  text-align: left;
+  text-decoration: none;
+  position: absolute;
+  font-size: 16px;
+  cursor: pointer;
 }
 .projects .projects-item .projects-item-inner h4
 {
